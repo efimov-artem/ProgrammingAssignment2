@@ -1,7 +1,9 @@
-# This is Programming Assignment 2 of "R Programming" course on coursera.org
+# This is Programming Assignment 2 of "R Programming" course by Johns Hopkins
+# Bloomberg School of Public Health on coursera.org
 # Copyright: Artem Efimov, 2015.
 
 # This function creates a special "matrix" object that can cache its inverse.
+
 makeCacheMatrix <- function(x = matrix()) {
         InverseMatrix <- NULL
         set <- function(y) {
@@ -13,7 +15,8 @@ makeCacheMatrix <- function(x = matrix()) {
         get <- function() x
         setInverseMatrix <- function(IM) InverseMatrix <<- IM
         getInverseMatrix <- function() InverseMatrix
-        list(set = set, get = get,
+        list(set = set,
+             get = get,
              setInverseMatrix = setInverseMatrix,
              getInverseMatrix = getInverseMatrix)
 }
